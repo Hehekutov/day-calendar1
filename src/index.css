@@ -1,0 +1,115 @@
+:root {
+  --max-width: 720px;
+  --accent: #276ef1;
+  --muted: #6b6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: #f7f8fb;
+  color: #111;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.app-header {
+  margin-bottom: 12px;
+}
+
+.app-main {
+  width: 100%;
+  max-width: var(--max-width);
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(20, 30, 60, 0.06);
+}
+
+.app-footer {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.daynote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.date-iso {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.date-pretty {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2px;
+  text-transform: capitalize;
+}
+
+.note-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 140px;
+  outline: none;
+}
+
+.note-textarea:focus {
+  box-shadow: 0 0 0 4px rgba(39, 110, 241, 0.08);
+  border-color: var(--accent);
+}
+
+.daynote-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #e6edf9;
+  color: #0b3a8a;
+}
+
+.status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
