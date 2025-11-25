@@ -1,16 +1,25 @@
-# React + Vite
+# Календарь дня
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простое веб-приложение, позволяющее оставлять заметку на текущую дату.  
+Все данные сохраняются локально — в LocalStorage браузера, поэтому заметки остаются даже после закрытия страницы.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Возможности приложения
 
-## React Compiler
+- Автоматически определяет сегодняшнюю дату.
+- Позволяет вводить и сохранять текст заметки.
+- Сохраняет данные в localStorage под ключом формата
+<img width="1280" height="614" alt="image" src="https://github.com/user-attachments/assets/679ed0f0-511e-4a0d-91bf-60ee9dd1ec89" />
+<img width="1280" height="678" alt="image" src="https://github.com/user-attachments/assets/08aeced3-1f8f-4f19-a21a-531c89dc589f" />
+## Как посмотреть сохранённые данные
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Чтобы увидеть сохранённую заметку в LocalStorage:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Windows (любой браузер)
+1. Нажмите F12, чтобы открыть инструменты разработчика.
+2. Перейдите на вкладку Application (в Firefox — *Storage*).
+3. Слева выберите LocalStorage → ваш домен (например: http://localhost:5173).
+4. В таблице будут отображены:
+ - ключ (`daynote:2025-11-25`)
+ - значение (ваша заметка)
